@@ -11,15 +11,16 @@
 <p>urllib2是python中的HTTP客户端库</p>
 <p>工作中正好用到这个类库，自己写的一个最简单的小例子记录一下</p>
 <p>以下代码模块是通过HTTP请求从本地</p>
-<code>
->>> import urllib2
->>> url = 'http://127.0.0.1'
->>> request = urllib2.Request(url)
->>> response = urllib2.urlopen(request)
->>> response.read()
-'<html>\n<head>\n<title>Welcome to nginx!</title>\n</head>\n<body bgcolor="white" text="black">\n<center><h1>Welcome to nginx!</h1></center>\n</body>\n</html>\n'
+<p>import urllib</p>
+<p>url = 'http://127.0.0.1'</p>
+<p>request = urllib2.Request(url)</P>
+<p>response = urllib2.urlopen(request)</p>
+<p>response.read()</p>
 
-</code>
+<textarea>
+'<html>\n<head>\n<title>Welcome to nginx!</title>\n</head>\n<body bgcolor="white" text="black">\n<center><h1>Welcome to nginx!</h1></center>\n</body>\n</html>\n'
+</textarea>
+
 </p>27 Nov 2014</p>
 	
 
