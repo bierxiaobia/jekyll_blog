@@ -1,56 +1,15 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Alice's Blog
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Jekyll blog : Alice&#39;s blog">
+<h2>{{ page.title }}</h2>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<p>最新文章</p>
 
-    <title>Jekyll blog</title>
-  </head>
+<ul>
+   {% for post in site.posts %}
+   <li>{{ post.date | date_to_string }}<a href ="{{ site.baseurl }}{{ post.url }}">{{ post。title }}</a></li>
+   {% endfor %}
+</ul>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/wangalice/jekyll_blog">View on GitHub</a>
-
-          <h1 id="project_title">Jekyll blog</h1>
-          <h2 id="project_tagline">Alice&#39;s blog</h2>
-          <h1 id="project_tagline">Hi, I just need a test</h1>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/wangalice/jekyll_blog/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/wangalice/jekyll_blog/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="jekyll_blog" class="anchor" href="#jekyll_blog" aria-hidden="true"><span class="octicon octicon-link"></span></a>jekyll_blog</h1>
-
-<p>Hi, everyone
-    Today is Nov 26, 2014. I start my blog here.</p>
-
-<p>Alice's blog</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Jekyll blog maintained by <a href="https://github.com/wangalice">wangalice</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
